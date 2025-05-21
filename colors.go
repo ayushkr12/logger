@@ -1,0 +1,26 @@
+package logger
+
+const (
+	Red          = "\033[31m"
+	Reset        = "\033[0m"
+	LightBlue    = "\033[94m"
+	LightGreen   = "\033[1;32m"
+	Blue         = "\033[34m"
+	Yellow       = "\033[33m"
+	Cyan         = "\033[36m"
+	BrightYellow = "\033[93m"
+	Coral        = "\033[38;5;209m"
+	Magenta      = "\033[35m"
+	Acidic       = "\033[38;5;190m"
+	Purple       = "\033[35m"
+	White        = "\033[97m"
+	Gray         = "\033[90m"
+	LightGray    = "\033[37m"
+	Orange       = "\033[38;5;214m"
+	Green        = "\033[32m"
+	LightRed     = "\033[1;31m"
+	LightCyan    = "\033[96m"
+	LightMagenta = "\033[95m"
+	Teal         = "\033[38;5;37m"
+	Amber        = "\033[38;5;214m"
+)
