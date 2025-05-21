@@ -28,7 +28,7 @@ func main() {
 	log.Warnf("This is a warning message with format: %s", "formatted")
 	log.Debug("This is a debug message")
 	log.Debugf("This is a debug message with format: %s", "formatted")
-	// log.Error("This is an error message")
+	log.Error("This is an error message")
 	log.Errorf("This is an error message with format: %s", "formatted")
 }
 ```

@@ -33,7 +33,7 @@ func Info(message string) {
 	if DisableInfo {
 		return
 	}
-	fmt.Fprintf(os.Stderr, "%s[INFO]%s %s\n", LightBlue, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[INFO]%s %s\n", Cyan, Reset, formatMessage(message))
 }
 
 func Infof(format string, a ...any) {
@@ -55,7 +55,7 @@ func Warn(message string) {
 	if DisableWarn {
 		return
 	}
-	fmt.Fprintf(os.Stderr, "%s[WARNING]%s %s\n", Yellow, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[WARN]%s %s\n", Yellow, Reset, formatMessage(message))
 }
 
 func Warnf(format string, a ...any) {
@@ -66,7 +66,7 @@ func Debug(message string) {
 	if DisableDebug {
 		return
 	}
-	fmt.Fprintf(os.Stderr, "%s[DEBUG]%s %s\n", Cyan, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[DEBUG]%s %s\n", LightBlue, Reset, formatMessage(message))
 }
 
 func Debugf(format string, a ...any) {
