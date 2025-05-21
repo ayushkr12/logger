@@ -21,7 +21,7 @@ func formatMessage(msg string) string {
 }
 
 func Error(message string) {
-	fmt.Printf("%s[ERROR]%s %s\n", Red, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[ERROR]%s %s\n", Red, Reset, formatMessage(message))
 	os.Exit(1)
 }
 
@@ -33,7 +33,7 @@ func Info(message string) {
 	if DisableInfo {
 		return
 	}
-	fmt.Printf("%s[INFO]%s %s\n", LightBlue, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[INFO]%s %s\n", LightBlue, Reset, formatMessage(message))
 }
 
 func Infof(format string, a ...any) {
@@ -44,7 +44,7 @@ func Success(message string) {
 	if DisableSuccess {
 		return
 	}
-	fmt.Printf("%s[OK]%s %s\n", LightGreen, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[OK]%s %s\n", LightGreen, Reset, formatMessage(message))
 }
 
 func Successf(format string, a ...any) {
@@ -55,7 +55,7 @@ func Warn(message string) {
 	if DisableWarn {
 		return
 	}
-	fmt.Printf("%s[WARNING]%s %s\n", Yellow, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[WARNING]%s %s\n", Yellow, Reset, formatMessage(message))
 }
 
 func Warnf(format string, a ...any) {
@@ -66,7 +66,7 @@ func Debug(message string) {
 	if DisableDebug {
 		return
 	}
-	fmt.Printf("%s[DEBUG]%s %s\n", Cyan, Reset, formatMessage(message))
+	fmt.Fprintf(os.Stderr, "%s[DEBUG]%s %s\n", Cyan, Reset, formatMessage(message))
 }
 
 func Debugf(format string, a ...any) {
