@@ -22,7 +22,7 @@ func formatMessage(msg string) string {
 
 func Error(message string) {
 	fmt.Fprintf(os.Stderr, "%s[ERROR]%s %s\n", Red, Reset, formatMessage(message))
-	os.Exit(1)
+	// os.Exit(1)
 }
 
 func Errorf(format string, a ...any) {
